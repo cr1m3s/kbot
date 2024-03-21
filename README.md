@@ -1,1 +1,1 @@
-# kbot
+# kbot -- telegram bot project
