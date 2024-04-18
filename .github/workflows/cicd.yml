@@ -13,3 +13,10 @@ jobs:
 
       - name: Run
         run: make test
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest
