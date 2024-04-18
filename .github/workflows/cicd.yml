@@ -26,3 +26,11 @@ jobs:
           APP: "kbot"
           REGISTRY: ghcr.io/cr1m3s/
         run: make image push
+
+  cd:
+    name: CD
+    runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v3
+    with:
+      fetch-depth: 0
