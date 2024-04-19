@@ -59,5 +59,21 @@ pipeline {
                 sh "make push"
             }
         }
-			}
+				
+				stage('logout') {
+						steps {
+								script {
+										try {
+												node {
+														sh "docker logout"
+												}
+										} catch (Exception e) {
+												echo "Error occurred during docker logout: ${e.message}"
+												currentBuild.result = 'FAILURE'
+												error 'Failed to logout from Docker'
+										}
+								}
+						}
+				}
+		}
 	}
