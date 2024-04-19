@@ -15,17 +15,17 @@ pipeline {
 
         stage('clone') {
             steps {
-							node {
                 echo 'Clone Repository'
                 git branch: "${BRANCH}", url: "${REPO}"
-							}
 						}
         }
 
         stage('test') {
             steps {
-                echo 'Testing started'
-                sh "make test"
+								node {
+										echo 'Testing started'
+										sh "make test"
+								}
             }
         }
 
