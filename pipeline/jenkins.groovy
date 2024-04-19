@@ -60,11 +60,14 @@ pipeline {
             steps {
                 sh "make push"
             }
-        } 
-    }
-    post {
-        always {
-            sh 'docker logout'
         }
     }
-}
+		post {
+        always {
+            // Use withEnv to ensure the environment variables are accessible
+            withEnv(['GITHUB_TOKEN_PSW=${GITHUB_TOKEN_USR}', 'GITHUB_TOKEN_USR=${GITHUB_TOKEN}']) {
+                sh 'docker logout'
+            }
+        }
+    }
+	}
