@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "cr1m3s"
-  tag: "v1.0.0-7a8f7fa"
+  tag: "v1.0.0-505ac1e"
   arch: amd64
   os: linux
   # Overrides the image tag whose default is the chart appVersion.
