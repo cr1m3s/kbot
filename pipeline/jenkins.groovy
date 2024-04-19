@@ -16,9 +16,7 @@ pipeline {
 				stage('Example') {
             steps {
                 echo "Build for platform ${params.OS}"
-
                 echo "Build for arch: ${params.ARCH}"
-
             }
         }
 
@@ -60,6 +58,11 @@ pipeline {
             steps {
                 sh "make push"
             }
+        }
+			}
+    post {
+        always {
+            sh 'docker logout'
         }
     }
 	}
