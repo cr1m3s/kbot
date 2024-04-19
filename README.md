@@ -31,4 +31,3 @@ v1.0.2
 ```
 /start hello --> Hello, I'm kbot v1.0.2!
 ```
-ffff
