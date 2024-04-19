@@ -47,12 +47,6 @@ pipeline {
                 sh "make image"
             }
         }
-        
-        stage('login to GHCR') {
-            steps {
-                sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
-            }
-        }
 
         stage('push image') {
             steps {
