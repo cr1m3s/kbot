@@ -12,7 +12,6 @@ pipeline {
     }
 
     stages {
-
         stage('clone') {
             steps {
                 echo 'Clone Repository'
@@ -22,10 +21,8 @@ pipeline {
 
         stage('test') {
             steps {
-								node {
-										echo 'Testing started'
-										sh "make test"
-								}
+								echo 'Testing started'
+								sh "make test"
             }
         }
 
