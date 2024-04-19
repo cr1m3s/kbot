@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "cr1m3s/kbot"
-  tag: "v1.0.3-433e74e"
+  tag: "1.0.0-ca44bdf"
   arch: amd64
   pullPolicy: IfNotPresent
   os: linux
