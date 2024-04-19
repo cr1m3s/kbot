@@ -59,11 +59,11 @@ pipeline {
                 sh "make push"
             }
         }
-			
-    post {
-        always {
-						sh 'docker logout'
-        }
 			}
-		}
+	
+			post {
+					always {
+							sh 'docker logout'
+					}
+			}
 	}
