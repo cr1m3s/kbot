@@ -6,7 +6,6 @@ pipeline {
     }
 
     environment {
-        GITHUB_TOKEN=credentials('junk')
         REPO = 'https://github.com/cr1m3s/kbot.git'
         BRANCH = 'main'
     }
