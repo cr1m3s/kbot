@@ -4,10 +4,12 @@
 
 replicaCount: 1
 image:
-  repository: cr1m3s/kbot
+  registry: "ghcr.io"
+  repository: "cr1m3s/kbot"
   tag: "v1.0.3-433e74e"
   arch: amd64
   pullPolicy: IfNotPresent
+  os: linux
   # Overrides the image tag whose default is the chart appVersion.
 secret:
   name: "kbot"
