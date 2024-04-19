@@ -15,9 +15,11 @@ pipeline {
 
         stage('clone') {
             steps {
+							node {
                 echo 'Clone Repository'
                 git branch: "${BRANCH}", url: "${REPO}"
-            }
+							}
+						}
         }
 
         stage('test') {
