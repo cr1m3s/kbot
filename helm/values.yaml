@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: cr1m3s/kbot
-  tag: "v1.0.3-3b28719"
+  tag: "v1.0.3-433e74e"
   arch: amd64
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
