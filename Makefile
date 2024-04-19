@@ -3,7 +3,7 @@ APP=$(shell basename $(shell git remote get-url origin))
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
 TARGETARCH=amd64
-DOCKER_TAG=${REGISTRY}/${APP}:${VERSION}-${TARGET-OS}-${TARGETARCH}
+DOCKER_TAG=${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 format:
 	gofmt -s -w ./
