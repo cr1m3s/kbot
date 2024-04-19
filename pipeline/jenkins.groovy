@@ -12,6 +12,16 @@ pipeline {
     }
 
     stages {
+        
+				stage('Example') {
+            steps {
+                echo "Build for platform ${params.OS}"
+
+                echo "Build for arch: ${params.ARCH}"
+
+            }
+        }
+
         stage('clone') {
             steps {
                 echo 'Clone Repository'
