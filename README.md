@@ -43,7 +43,7 @@ v1.0.2
 `docker-compose -f otel/docker-compose.yaml up`
 
 4. If everything correct:
-![compose](./pic/monitor.png)
+![compose](./pic/compose.png)
 ![fluentbit](./pic/fluentbit.png)
 
 5. Check monitor at METRIC_HOST address:
