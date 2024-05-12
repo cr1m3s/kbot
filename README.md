@@ -22,12 +22,29 @@
 --- 
 
 * Білд: 
-```go build -ldflags "-X="github.com/cr1m3s/kbot/cmd.appVersion={bot_version}```.
+`go build -ldflags "-X="github.com/cr1m3s/kbot/cmd.appVersion={bot_version}`
 
-* Посилання:  ```t.me/cr1m3s_k_bot```
+* Посилання:  `t.me/cr1m3s_k_bot`
 
 v1.0.2
 
 ```
 /start hello --> Hello, I'm kbot v1.0.2!
 ```
+
+## Monitoring
+
+1. Copy repository:
+`git clone https://github.com/cr1m3s/kbot`
+
+2. Setup TELE_TOKEN and METRICS_HOST env variables.
+
+3. Compose monitor:
+`docker-compose -f otel/docker-compose.yaml up`
+
+4. If everything correct:
+[compose](./pic/monitor.png)
+[fluentbit](./pic/fluentbit.png)
+
+5. Check monitor at METRIC_HOST address:
+[mectrics](./pic/grafana.png)
